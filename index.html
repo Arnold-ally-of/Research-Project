@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIX CHAMA - Investment Group Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Public Landing Page (before login) -->
+    <div id="publicPage" class="main-app">
+        <!-- Header with Login Button -->
+        <header class="header header-public">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>PIX CHAMA</h1>
+                    <p class="subtext">Investment Group Portal</p>
+                </div>
+                <nav class="navbar" id="publicNavbar">
+                    <a href="#" class="nav-link" data-page="general-info">General Info</a>
+                    <a href="#" class="nav-link" data-page="contact">Contact</a>
+                </nav>
+                <div class="user-info">
+                    <button id="loginBtnPublic" class="btn btn-secondary">Login</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div id="publicPageContainer" class="page-container">
+                <!-- Public page content will be inserted here -->
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 PIX CHAMA Investment Group. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="login-box">
+                <h1>PIX CHAMA</h1>
+                <p class="tagline">Investment Group Portal</p>
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required placeholder="e.g., admin1, member1">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="Enter password">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    <p class="login-hint">Demo users: admin1/password, member1/password, etc.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application Page (after login) -->
+    <div id="mainApp" class="main-app" style="display: none;">
+        <!-- Header & Navigation -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>PIX CHAMA</h1>
+                    <p class="subtext">Investment Group Portal</p>
+                </div>
+                <nav class="navbar" id="navbar">
+                    <!-- Navigation links will be inserted by JavaScript -->
+                </nav>
+                <div class="user-info">
+                    <span id="userDisplayName"></span>
+                    <button id="logoutBtn" class="btn btn-secondary btn-sm">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div id="pageContainer" class="page-container">
+                <!-- Page content will be dynamically inserted here -->
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 PIX CHAMA Investment Group. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
